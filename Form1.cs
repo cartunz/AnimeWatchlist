@@ -30,9 +30,5 @@ namespace AnimeWatchlist
             }
         }
 
-        private void lbl2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
