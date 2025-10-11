@@ -19,6 +19,7 @@ namespace AnimeWatchlist
             {
                 listBox1.Items.Add(animeTitle);
                 inputtxbox.Clear();
+                inputtxbox.Remove();
             }
         }
 
