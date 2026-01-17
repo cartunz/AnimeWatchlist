@@ -1,4 +1,4 @@
-﻿namespace AnimeWatchlist
+﻿namespace WinFormsApp1
 {
     partial class Form1
     {
@@ -28,93 +28,130 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbl1 = new Label();
-            lbl2 = new Label();
-            listBox1 = new ListBox();
-            inputtxbox = new TextBox();
-            addbtn = new Button();
-            removebtn = new Button();
+            btnadd = new Button();
+            btnrmv = new Button();
+            label1 = new Label();
+            Animetxtbx = new TextBox();
+            enteranm = new Label();
+            label2 = new Label();
+            Genretxtbx = new TextBox();
+            listView1 = new ListView();
             SuspendLayout();
             // 
-            // lbl1
+            // btnadd
             // 
-            lbl1.AutoSize = true;
-            lbl1.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl1.Location = new Point(46, 51);
-            lbl1.Name = "lbl1";
-            lbl1.Size = new Size(119, 22);
-            lbl1.TabIndex = 0;
-            lbl1.Text = "Enter Anime :";
+            btnadd.BackColor = Color.SaddleBrown;
+            btnadd.ForeColor = Color.Bisque;
+            btnadd.Location = new Point(314, 94);
+            btnadd.Name = "btnadd";
+            btnadd.Size = new Size(81, 33);
+            btnadd.TabIndex = 1;
+            btnadd.Text = "Add";
+            btnadd.UseVisualStyleBackColor = false;
+            btnadd.Click += btnadd_Click;
             // 
-            // lbl2
+            // btnrmv
             // 
-            lbl2.AutoSize = true;
-            lbl2.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl2.Location = new Point(45, 125);
-            lbl2.Name = "lbl2";
-            lbl2.Size = new Size(222, 26);
-            lbl2.TabIndex = 1;
-            lbl2.Text = "My Anime Watchlist";
-            lbl2.Click += lbl2_Click;
+            btnrmv.BackColor = Color.SaddleBrown;
+            btnrmv.ForeColor = Color.Bisque;
+            btnrmv.Location = new Point(168, 413);
+            btnrmv.Name = "btnrmv";
+            btnrmv.Size = new Size(84, 34);
+            btnrmv.TabIndex = 2;
+            btnrmv.Text = "Remove";
+            btnrmv.UseVisualStyleBackColor = false;
+            btnrmv.Click += btnrmv_Click;
             // 
-            // listBox1
+            // label1
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(45, 167);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(455, 184);
-            listBox1.TabIndex = 2;
+            label1.AutoSize = true;
+            label1.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.SaddleBrown;
+            label1.Location = new Point(96, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(228, 26);
+            label1.TabIndex = 3;
+            label1.Text = "Anime Watchlist";
             // 
-            // inputtxbox
+            // Animetxtbx
             // 
-            inputtxbox.Location = new Point(171, 50);
-            inputtxbox.Name = "inputtxbox";
-            inputtxbox.Size = new Size(229, 23);
-            inputtxbox.TabIndex = 3;
+            Animetxtbx.BackColor = Color.Bisque;
+            Animetxtbx.Location = new Point(138, 82);
+            Animetxtbx.Name = "Animetxtbx";
+            Animetxtbx.Size = new Size(160, 23);
+            Animetxtbx.TabIndex = 4;
             // 
-            // addbtn
+            // enteranm
             // 
-            addbtn.Location = new Point(416, 50);
-            addbtn.Name = "addbtn";
-            addbtn.Size = new Size(84, 25);
-            addbtn.TabIndex = 4;
-            addbtn.Text = "Add";
-            addbtn.UseVisualStyleBackColor = true;
+            enteranm.AutoSize = true;
+            enteranm.BackColor = Color.Tan;
+            enteranm.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            enteranm.ForeColor = Color.SaddleBrown;
+            enteranm.Location = new Point(28, 82);
+            enteranm.Name = "enteranm";
+            enteranm.Size = new Size(104, 21);
+            enteranm.TabIndex = 5;
+            enteranm.Text = "Enter Anime";
             // 
-            // removebtn
+            // label2
             // 
-            removebtn.Location = new Point(219, 369);
-            removebtn.Name = "removebtn";
-            removebtn.Size = new Size(91, 27);
-            removebtn.TabIndex = 5;
-            removebtn.Text = "button1";
-            removebtn.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Tan;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.SaddleBrown;
+            label2.Location = new Point(23, 116);
+            label2.Name = "label2";
+            label2.Size = new Size(109, 21);
+            label2.TabIndex = 6;
+            label2.Text = "Anime Genre";
+            // 
+            // Genretxtbx
+            // 
+            Genretxtbx.BackColor = Color.Bisque;
+            Genretxtbx.Location = new Point(138, 116);
+            Genretxtbx.Name = "Genretxtbx";
+            Genretxtbx.Size = new Size(160, 23);
+            Genretxtbx.TabIndex = 7;
+            // 
+            // listView1
+            // 
+            listView1.BackColor = Color.Bisque;
+            listView1.ForeColor = Color.SaddleBrown;
+            listView1.Location = new Point(23, 161);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(372, 237);
+            listView1.TabIndex = 8;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(550, 450);
-            Controls.Add(removebtn);
-            Controls.Add(addbtn);
-            Controls.Add(inputtxbox);
-            Controls.Add(listBox1);
-            Controls.Add(lbl2);
-            Controls.Add(lbl1);
+            BackColor = Color.Tan;
+            ClientSize = new Size(434, 477);
+            Controls.Add(listView1);
+            Controls.Add(Genretxtbx);
+            Controls.Add(label2);
+            Controls.Add(enteranm);
+            Controls.Add(Animetxtbx);
+            Controls.Add(label1);
+            Controls.Add(btnrmv);
+            Controls.Add(btnadd);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Anime Watchlist";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label lbl1;
-        private Label lbl2;
-        private ListBox listBox1;
-        private TextBox inputtxbox;
-        private Button addbtn;
-        private Button removebtn;
+        private Button btnadd;
+        private Button btnrmv;
+        private Label label1;
+        private TextBox Animetxtbx;
+        private Label enteranm;
+        private Label label2;
+        private TextBox Genretxtbx;
+        private ListView listView1;
     }
 }
